@@ -4,7 +4,7 @@ module Api
             protect_from_forgery with: :null_session
             def index
                 airlines = Airline.all
-
+                test
                 render json: AirlineSerializer.new(airlines,options).serialized_json
             end
 
